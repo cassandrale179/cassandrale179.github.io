@@ -7,12 +7,14 @@
     <link rel="icon" href="favicon.ico" type="image/gif">
 </head>
 
+<!-- Title and subtitles -->
 <div id="intro">
     <h1> Minh Le</h1>
     <h3> Computer Science Major at Drexel University ('21) </h3>
 </div>
 
 
+<!-- Terminal container-->
 <div id="container">
     <div id="terminal">
         <div id="window-bar">
@@ -21,13 +23,94 @@
                 <span class="btn minimize"></span>
                 <span class="btn maximize"></span> 
             </div>
-            <span class="title">about_me</span>
+            <span class="title">terminal</span>
+        </div>
+        <div id="terminal-content">
+
+            <!-- About me -->
+            <span>
+                <p class="home">minhle@macbook-pro$ </p> 
+                <p class="content"> <b>[about me] : </b></p> 
+            </span>
+            <span>
+                <p class="key"><b> > major: </b></p> <p> computer science </p> <br / > 
+                <p class="key"><b> > tracks: </b> </p> <p> artificial intelligence & algorithms </p> <br / > 
+                <p class="key"><b> > gpa: </b></p> <p> 3.8 / 4.0 </p> <br / > 
+            </span>
+
+
+            <!-- Work experience -->
+            <br / > 
+            <span>
+                <p class="home">minhle@macbook-pro$ </p> 
+                <p class="content"> <b>[work experience] :</b> </p> 
+                <p>  </p>
+            </span>
+            <span>
+                <p class="key"><b> > PayPal  </b></p> 
+                <p class="job"> [Summer 2019]: </p> 
+                <p class="team"> Software Engineering Intern (Credit SDK) </p> <br / > 
+            </span>
+            <span>
+                <p class="key"><b> > Google  </b></p> 
+                <p class="job"> [Spring 2019]: </p> 
+                <p class="team"> Software Engineering Intern (Gmail) </p> <br / > 
+            </span>
+            <span>
+                <p class="key"><b> > Google  </b></p>
+                <p class="job"> [Summer 2018]: </p> 
+                <p class="team"> Engineer Practicum Intern (YouTube TV) </p> <br / >  
+            </span>
+            <span>
+                <p class="key"><b> > Bristol Myers Squibb  </b></p>
+                <p class="job"> [Spring 2018]: </p> 
+                <p class="team"> Software Engineer Intern (AWS Cloud) </p> <br / >  
+             </span>
+
+
+             <br / > 
+             <span>
+                 <p class="home">minhle@macbook-pro$ </p> 
+                 <p class="content"> <b>[research experience] :</b> </p> 
+             </span>
+             <span>
+                <p class="key"><b> > Cognitive Neuroengineering Lab </b></p> 
+                <p class="job"> [Winter 2019]: </p> 
+                <p class="team"> Dr. Megdalia & Dr. Friedman </p> <br / > 
+            </span>
+            <span>
+                <p class="key"><b> > Social Computing Lab </b></p> 
+                <p class="job"> [Summer 2017]: </p> 
+                <p class="team"> Prof. Andrea Forte </p> <br / > 
+            </span>
+
+            <br / > 
+            <span>
+                <p class="home">minhle@macbook-pro$ </p> 
+                <p class="content"> <b>[contact] :</b> </p> 
+            </span>
+            <span>
+               <p class="key"><b> > LinkedIn: </b></p> 
+               <p class="team"> <a href="https://www.linkedin.com/in/minh-n-le/"> minh-n-le</a> </p> <br / > 
+           </span>
+           <span>
+               <p class="key"><b> > Github: </b></p> 
+               <p class="team"> <a href="https://github.com/cassandrale179"> cassandrale179</a> </p> <br / > 
+           </span>
+           <span>
+                <p class="key"><b> > Blog: </b></p> 
+                <p class="team"> <a href="https://github.com/cassandrale179"> user_name</a> </p> <br / > 
+            </span>
+            <span class="blinking-cursor">_</span>
         </div>
     </div>
-
 </div> 
 
+
+<!-- Animated dot -->
 <canvas></canvas>
+
+
 <script>
     var canvasDots = function() {
         var canvas = document.querySelector('canvas'),
