@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); 
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display'); 
+@import url('https://fonts.googleapis.com/css?family=Nixie+One');
+
+
+/* Global CSS styles */ 
+h1, h3{
+    font-family: 'Nixie One', sans-serif; 
+    text-align: center; 
+    color: black; 
+}
+
+h3{
+    color: #CACFD2; 
+}
+
+
+hr{
+    width: 70%; 
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* ---- INTRO CSS ------ */ 
+#intro{
+    margin-top: 5%; 
+}
+
+
+/* Container for terminal */ 
+#container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 50px;
+    background: #fff; 
+}
+
+
+/* Terminal content */ 
+#terminal{
+    height: 30rem;
+    width: 45rem;
+    background: #111;
+    border: 1px solid #252525;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4rem rgba(0,0,0,0.4);
+}
+  
+
+/* Space bar */ 
