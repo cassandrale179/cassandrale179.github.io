@@ -234,7 +234,7 @@ a{
 
 
 /* ------- Styling posts ------- */ 
-#post{
+#blog-container{
     margin-left: 25%; 
     padding-top: 5rem; 
     padding-left: 10rem; 
@@ -258,18 +258,15 @@ a{
     text-align: left; 
 }
 
-#card p{
-    color: black; 
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 1rem; 
-}
-
 
 .quote{
     border-left: 1px black solid; 
     padding-left: 1rem;
     padding-right: 1rem; 
     text-align: justify;
+    color: black; 
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1rem; 
 }
 
 button{
