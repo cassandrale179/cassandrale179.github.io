@@ -16,7 +16,7 @@ var app = new Vue({
         posts: [
         { 
             id: 1, 
-            title: 'Book Review #394:', 
+            title: 'Book Review #394', 
             synopsis: 'A band of Shakespeare actors trying to survive in an apocalyptic world', 
             date: '09 December 2018', 
             tags: 'bookreviews', 
