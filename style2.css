@@ -183,19 +183,28 @@ a{
 
 #footer{
     margin-top: 3rem; 
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
+    text-align: center;  
+    font-family: 'Nixie One', sans-serif;
+    color: #CACFD2; 
+    font-size: 0.7rem; 
 }
 
 
 
-/* ------------- BLOG STUFF ---------- */ 
+
+
+/* ----------------- BLOG STYLING --------------- */ 
+
+
+/* ------------- Sidebar related things---------- */ 
 #sidebar{
     position: fixed; 
-    width: 25%;
+    width: 15rem;
     background: black; 
     height: 100%; 
     box-shadow: 0 0 4rem rgba(0,0,0,0.4);
-    padding-top: 5rem; 
+    padding: 5rem; 
     overflow: auto; 
 }
 
@@ -207,6 +216,24 @@ a{
     border-radius: 5rem; 
 }
 
+#sidebar h4{
+    font-size: 1rem; 
+    text-align: left; 
+}
+
+#sidebar h5{
+    text-align: left; 
+}
+
+#sidebar li{
+    font-family: 'Nixie One', sans-serif;
+    color:  #CACFD2; 
+    font-size: 0.9rem; 
+}
+
+
+
+/* ------- Styling posts ------- */ 
 #post{
     margin-left: 25%; 
     padding-top: 5rem; 
@@ -214,12 +241,12 @@ a{
     padding-right: 10rem; 
 }
 
+
+/* ------- Styling card related things ------- */ 
 #card{
     width: 100%; 
-    height: 20rem; 
+    padding-bottom: 2rem;
     border-bottom: 1px solid #E5E7E9;
-    /* background: black;  */
-    
 }
 
 #card h2{
@@ -234,4 +261,38 @@ a{
 #card p{
     color: black; 
     font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1rem; 
+}
+
+
+.quote{
+    border-left: 1px black solid; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    text-align: justify;
+}
+
+button{
+    margin-top: 2rem;
+    background: black; 
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none; 
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 0.9rem;
+}
+
+#card img{
+    height: 10rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.notes{
+    padding-top: 2rem;
 }
