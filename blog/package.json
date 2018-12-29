@@ -1,0 +1,18 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "A node.js blog with front-end in vue",
+  "main": "blog.js",
+  "scripts": {
+    "build": "browserify blog.js -o bundle.js"
+  },
+  "author": "cassandrale179",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "puppeteer": "^1.11.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
