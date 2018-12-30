@@ -12,13 +12,24 @@ I have dabbled a bit in Angular + React, so I am testing out Vue.js.
 ### 1. Front-end 
 
 ```javascript
+Vue.component('blog-post', {
+    props: ['post'],
+    template: `
+      <div>
+        <h2>{{ post.book_title }}</h2>
+        <h3> {{ post.book_author }} </h3>
+        <div v-html="post.review_body"></div> 
+      </div>
+    `
+  })
+
 var app = new Vue({
     el: '#blog-container',
     data: {
-      posts: []
-      ... 
-   } 
-}) 
+      posts: posts_values 
+    }, 
+})
+
 ```
 - On the HTML side: 
 ```html
@@ -62,3 +73,7 @@ var app = new Vue({
       // review_ids = [1291790836, 6832234232...] 
       ```
 
+### 3. Linking it together
+- Sadly, there was NO server side rendering allowed, so I just wrote all contents to a data.js file, and then use that as a global variables shared by the original blog.js file. This made the reviews automatically load and yay, we are kinda done with the project!
+- The problem is, this website will not automatically updated at all, unless someone run a triggered script locally to automatically update the website, so the original goal still fell short :(, but at least this website took less than 4 hours to build.  
+- Now onto writing the automatical manual script. 
