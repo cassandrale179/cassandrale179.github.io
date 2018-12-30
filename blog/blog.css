@@ -33,8 +33,6 @@
     font-size: 0.9rem; 
 }
 
-
-
 /* ------- Styling posts ------- */ 
 #blog-container{
     margin-left: 25%; 
@@ -93,5 +91,12 @@ button{
 }
 
 .notes{
-    padding-top: 2rem;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1rem;
+}
+
+.comment{
+    background: none; 
+    border: 1px black solid; 
+    color: black; 
 }
