@@ -74,6 +74,6 @@ var app = new Vue({
       ```
 
 ### 3. Linking it together
-- Sadly, there was NO server side rendering allowed, so I just wrote all contents to a data.js file, and then use that as a global variables shared by the original blog.js file. This made the reviews automatically load and yay, we are kinda done with the project!
-- The problem is, this website will not automatically updated at all, unless someone run a triggered script locally to automatically update the website, so the original goal still fell short :(, but at least this website took less than 4 hours to build.  
+- **Sadly, there was NO server side rendering allowed**, so I just wrote all contents to a data.js file, and then use that as a global variables shared by the original blog.js file. This made the reviews automatically load and yay, we are kinda done with the project!
+- **The problem is, this website will not automatically updated at all**, unless someone run a triggered script locally to update the data.js file, so the original goal still fell short 😞 but at least this website took less than 4 hours to build ¯\_(ツ)_/¯   
 - Now onto writing the automatical manual script. 
