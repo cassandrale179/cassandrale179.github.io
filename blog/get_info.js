@@ -6,8 +6,9 @@ const fs = require('fs');
 
 // Goodreads configuration variables 
 const key = process.env.key; 
+const username = process.env.username; 
 const user_id = process.env.user_id; 
-const shelf_name = 'bilsdungroman'; 
+const shelf_name = 'blog-post'; 
 const shelf_url = 'https://www.goodreads.com/review/list/' + user_id + '?shelf=' +  shelf_name; 
 const parser = new xml2js.Parser(); 
 
@@ -34,7 +35,8 @@ function ParseHTMLContent(){
       var content_promise_arr = getReviewContent(review_ids); 
       Promise.all(content_promise_arr).then((values) => {
         var json = JSON.stringify(values); 
-        fs.writeFile('data.json', json, 'utf8'); 
+        var string = 'var posts_values = ' + json; 
+        fs.writeFile('data.js', string, 'utf8'); 
       }); 
     }).catch((err) => {
         console.log(err) 
@@ -55,19 +57,33 @@ function getReviewContent(review_ids){
 
                 // Get book information 
                 var book_obj = result.GoodreadsResponse.review[0].book[0];
-                var book_title = book_obj.title;
-                var book_author = book_obj.authors[0].author[0].name; 
+                var book_title = book_obj.title[0];
+                var book_author = book_obj.authors[0].author[0].name[0]; 
+                
 
                 // Get reviews information 
                 var review_obj = result.GoodreadsResponse.review[0]; 
-                var review_body = review_obj.body[0]; 
-                var rating = review_obj.rating; 
+                var body = review_obj.body[0]; 
 
+                if (body.indexOf('Synopsis') != -1){
+                    var synopsis = body.substring(body.indexOf('Synopsis') + 'Synopsis </b>:'.length, body.indexOf("<br")); 
+                    var review_body = body.substring(body.indexOf("<br"), body.length); 
+                } else {
+                    var synopsis = ''; 
+                    var review_body = body; 
+                }
+               
+            
+                var rating = review_obj.rating; 
+                var read_date = review_obj.date_updated[0].split(" "); 
+                var date = read_date[1] + " " + read_date[2] + " " + read_date[read_date.length-1]; 
                 var content_object = {
                     'book_title': book_title, 
+                    'book_synopsis': synopsis, 
                     'book_author': book_author, 
                     'review_body': review_body, 
-                    'rating': rating 
+                    'rating': rating, 
+                    'date': date 
                 }
                 resolve(content_object); 
             }); 
@@ -77,6 +93,8 @@ function getReviewContent(review_ids){
     }); 
     return content_promise_arr; 
 }
+
+
 
 // Call functions down here 
 ParseHTMLContent(); 
