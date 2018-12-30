@@ -26,7 +26,7 @@
                 <li><u> Musings </u></li>
                 <li><u> Computer Science </u></li>
            </ul>
-          <h5 id="footer">Custom made with <a href="https://vuejs.org">Vue.js</a> </h5> 
+          <h5 id="footer"> ~ Custom made with <a href="https://vuejs.org">Vue.js</a> ~ </h5> 
         </div>
     </div>
 
@@ -34,14 +34,13 @@
     <div id="blog-container">
         <blog-post
             v-for="post in posts"
-            v-bind:key="post.id"
             v-bind:post="post"
         ></blog-post>
     </div>
 </body>
 
-<!-- <canvas></canvas> -->
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="data.js"></script>
 <script src="blog.js"></script>
-<script src="dotjs.js"></script>
