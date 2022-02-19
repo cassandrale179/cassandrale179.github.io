@@ -1,7 +1,5 @@
 ## Personal Website (in progress) 
 
-Link: https://minh-le.com
-
 ## Engineering Process
 - **For this blog, I want to try a different approach.** I often used modern frameworks like Angular or React, which always came in with a perfectly set-up environment to deploy on local host. I have also worked extensively with Node.js, which mades stuff especially easy for importing libraries. 
 - **Now I wanted to do things "minimally".** Not a bunch of files that include a lot of config, environment.ts, ..etc. 
