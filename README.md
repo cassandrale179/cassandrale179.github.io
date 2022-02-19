@@ -47,7 +47,7 @@ var app = new Vue({
 - **Problem**: Apparently Github is a static webpage, so they won't host any server-side back-end. I tried find a Node wrapper for [Goodreads API](https://github.com/bdickason/node-goodreads), so maybe I can use [Browserify](https://github.com/browserify/browserify) to somehow make Node worked on client-side JavaScript. Then maybe I can make GET request through the wrapper to get my reviews. It turned out to be a huge mess! 
     - I got Browserify to work (but the debugging process was hell 😧. Apparently Chrome Dev Tools still output error message from both bundle.js and the original js file, which I had to filter out).
     - The Goodreads API node wrappper is also error-prone, and apparently I can't even make XML requests due to CORS.  😢  
-- **New Approach**: Following the minimal approach, I said f it and threw the Goodreads API + Browserify away. I create a small Expres app on the side, then actually scraped my own data from scratch using [Cheerio](https://github.com/cheeriojs/cheerio). This is simple because 
+- **New Approach**: Following the minimal approach, I said f it and threw the Goodreads API + Browserify away. I create a small Express app on the side, then actually scraped my own data from scratch using [Cheerio](https://github.com/cheeriojs/cheerio). This is simple because 
     ```javascript 
     
     const $ = require('cheerio'); 
